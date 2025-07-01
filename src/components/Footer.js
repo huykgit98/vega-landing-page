@@ -6,62 +6,98 @@ import {
   IoLogoLinkedin,
   IoLogoTiktok,
   IoLogoYoutube,
-} from "react-icons/io5";
+} from 'react-icons/io5';
 
 class Footer extends Component {
   render() {
     const current_year = new Date().getFullYear();
     return (
       <div id="section_footer">
-        <div className='text-center py-4'>
-          <Link href="https://1manstartup.com/privacy-policy" target="_blank" className='btn btn-link'>
+        <div className="text-center py-4">
+          <Link
+            href="https://1manstartup.com/privacy-policy"
+            target="_blank"
+            className="btn btn-link"
+          >
             Privacy
           </Link>
           <span>|</span>
-          <Link href="https://1manstartup.com/terms-and-conditions" target="_blank" className='btn btn-link'>
+          <Link
+            href="https://1manstartup.com/terms-and-conditions"
+            target="_blank"
+            className="btn btn-link"
+          >
             Terms
           </Link>
           <span>|</span>
-          <Link href="mailto:Roads Audio<dave@roadsaudio.com>" className='btn btn-link'>
+          <Link
+            href="mailto:Vega Support<support@vegaapp.com>"
+            className="btn btn-link"
+          >
             Contact
           </Link>
 
-          <div className='mt-2 mb-3'>
-            <Link href="https://www.facebook.com/profile.php?id=61562204128726" target="_blank" className='social-icon mx-1'>
-              <IoLogoFacebook size={25}/>
+          <div className="mt-2 mb-3">
+            <Link
+              href="https://www.facebook.com/vegamoneytracker"
+              target="_blank"
+              className="social-icon mx-1"
+            >
+              <IoLogoFacebook size={25} />
             </Link>
 
-            <Link href="https://www.instagram.com/roadsaudio/" target="_blank" className='social-icon mx-1'>
-              <IoLogoInstagram size={25}/>
+            <Link
+              href="https://www.instagram.com/vegamoneytracker/"
+              target="_blank"
+              className="social-icon mx-1"
+            >
+              <IoLogoInstagram size={25} />
             </Link>
 
-            <Link href="https://www.linkedin.com/company/roads-audio/" target="_blank" className='social-icon mx-1'>
-              <IoLogoLinkedin size={25}/>
+            <Link
+              href="https://www.linkedin.com/company/vega-money-tracker/"
+              target="_blank"
+              className="social-icon mx-1"
+            >
+              <IoLogoLinkedin size={25} />
             </Link>
 
-            <Link href="https://www.tiktok.com/@roadsaudio" target="_blank" className='social-icon mx-1'>
-              <IoLogoTiktok size={25}/>
+            <Link
+              href="https://www.tiktok.com/@vegamoneytracker"
+              target="_blank"
+              className="social-icon mx-1"
+            >
+              <IoLogoTiktok size={25} />
             </Link>
 
-            <Link href="https://www.youtube.com/@RoadsAudio" target="_blank" className='social-icon mx-1'>
-              <IoLogoYoutube size={25}/>
+            <Link
+              href="https://www.youtube.com/@VegaMoneyTracker"
+              target="_blank"
+              className="social-icon mx-1"
+            >
+              <IoLogoYoutube size={25} />
             </Link>
           </div>
-
 
           <div>
-            <Link href="/blogs/the-evolution-of-audio-from-radio-to-roads" className='btn btn-link'>
-              The Evolution of Audio
+            <Link
+              href="/blogs/smart-budgeting-with-ai-technology"
+              className="btn btn-link"
+            >
+              Smart Budgeting with AI
             </Link>
-            <Link href="/blogs/how-to-start-a-private-micro-podcast" className='btn btn-link'>
-              How to Start a Micro Podcast
+            <Link
+              href="/blogs/how-to-track-expenses-effectively"
+              className="btn btn-link"
+            >
+              How to Track Expenses Effectively
             </Link>
           </div>
 
-          <p className='mt-4'>Copyright © {current_year}, 1ManStartup LLC. All Rights Reserved.</p>
+          <p className="mt-4">
+            Copyright © {current_year}, 1ManStartup LLC. All Rights Reserved.
+          </p>
         </div>
-
-        
       </div>
     );
   }

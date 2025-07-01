@@ -1,6 +1,5 @@
 import styles from '@/styles/Home.module.scss';
 import Image from 'next/image';
-import NodeOverlay from '@/components/NodeOverlay';
 import UseCase from '@/components/UseCase';
 import FaqItem from '@/components/FaqItem';
 import Hero from '@/components/Hero';
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <NodeOverlay />
         <Hero
           title="Vega – AI Money Tracker"
           subtitle="Track every expense in seconds, let AI auto-categorize for you, and see your budget insights in real time."
@@ -34,29 +32,29 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <Review
-                body="Roads allows you to use your voice to stay connected with the world. The app is designed beautifully and is really intuitive."
-                name="Nolanmakatche"
+                body="Vega has completely transformed how I track my expenses. The AI categorization is incredibly accurate and saves me so much time every month."
+                name="SarahFinance23"
               />
               <Review
-                body="I first started using this app with a friend and it's a lot of fun. We use this app now instead of texting or voicemails since we are both traveling and it makes keeping up with each other a lot easier."
-                name="Sethconner10"
+                body="I love how Vega automatically categorizes my expenses in real-time. I can finally see where my money goes without spending hours on manual entry."
+                name="BudgetMaster2024"
               />
               <Review
-                body="One of the coolest apps I've used in a long time. A great way to communicate with family and friends."
-                name="neenu17"
+                body="The AI insights in Vega are amazing! It caught spending patterns I never noticed and helped me save over $200 last month."
+                name="SmartSaver99"
               />
               <Review
-                body="A game changer, the interactive audio comments bring conversations to life. It's been super fun chatting with my friends from all around the world on Roads."
-                name="makk1ntosh"
+                body="Vega makes expense tracking effortless. Just snap a photo of my receipt and it's automatically categorized and added to my budget. Brilliant!"
+                name="TechSavvySpender"
               />
               <Review
-                body="I've tried a lot of chat apps and didn't think Roads would be any different. Glad I gave it a chance because it's much better than I expected!"
-                name="LFO16"
+                body="I've tried so many budgeting apps, but Vega's AI categorization is a game changer. It's like having a personal financial assistant."
+                name="MoneyWise2025"
                 className="d-none d-md-block"
               />
               <Review
-                body="I was not expecting to use this app as much as I have. It really pulls you in once you start using it!"
-                name="Jengla11"
+                body="Vega's real-time budget insights have helped me stay on track with my financial goals. The app is intuitive and incredibly powerful."
+                name="FinanciallyFit"
                 className="d-none d-md-block"
               />
             </div>
@@ -75,7 +73,7 @@ export default function Home() {
         </div>
 
         <div id={styles.section_features}>
-          <h2 className="h2-lg my-lg text-center">How Roads Is Unique</h2>
+          <h2 className="h2-lg my-lg text-center">How Vega Is Unique</h2>
 
           <div className="container">
             <div className="row justify-content-md-center">
@@ -150,32 +148,32 @@ export default function Home() {
         </div>
 
         <div id={styles.section_use_cases}>
-          <h2 className="h2-lg my-lg text-center">Ways To Use Roads</h2>
+          <h2 className="h2-lg my-lg text-center">Ways To Use Vega</h2>
           <div className="container">
             <div className="row">
               <UseCase
                 imagePath="/images/icons/note.svg"
-                title="Record voice notes for yourself"
+                title="Track daily expenses automatically"
               />
               <UseCase
                 imagePath="/images/icons/chat.svg"
-                title="Chat with a friend asynchronously"
+                title="Set budget goals and spending limits"
               />
               <UseCase
                 imagePath="/images/icons/book.svg"
-                title="Create a virtual book club"
+                title="Analyze spending patterns with AI insights"
               />
               <UseCase
                 imagePath="/images/icons/lecture.svg"
-                title="Record a lecture and answer questions"
+                title="Generate financial reports and summaries"
               />
               <UseCase
                 imagePath="/images/icons/team.svg"
-                title="Share weekly updates with your team"
+                title="Share budgets with family members"
               />
               <UseCase
                 imagePath="/images/icons/podcast.svg"
-                title="Co-create podcasts with others"
+                title="Get personalized saving recommendations"
               />
             </div>
           </div>
@@ -188,44 +186,45 @@ export default function Home() {
               <div className="accordion" id="faq_accordion">
                 <FaqItem
                   itemNum="one"
-                  question="How do I start a conversation on Roads?"
-                  answer="You simply hit record in the app and start talking. After you finish recording you can add a title and share your recording in a channel so others can listen."
+                  question="How do I start tracking expenses with Vega?"
+                  answer="Simply open the app and either snap a photo of your receipt, manually enter an expense, or connect your bank account. Vega's AI will automatically categorize and track everything for you."
                 />
                 <FaqItem
                   itemNum="two"
-                  question="Who can join my channels?"
-                  answer="Channels can be joined by anyone the channel owner chooses. If you are friends with someone on Roads you can add them to a channel automatically, if not you can send them a channel invite link. The channel owner controls who is in the channel."
+                  question="How accurate is the AI categorization?"
+                  answer="Vega's AI is highly accurate, correctly categorizing over 95% of expenses automatically. The AI learns from your spending patterns and gets smarter over time. You can always manually adjust categories if needed."
                 />
                 <FaqItem
                   itemNum="three"
-                  question="How do I listen to comments that have been added to a conversation?"
-                  answer="When listening to a conversation if there is a comment, you'll have to option to take the road and listen to the comment. If you decide to listen, when the comment completes playing the original conversation will continue."
+                  question="Can I set budget limits and get notifications?"
+                  answer="Yes! You can set monthly budget limits for different categories like groceries, entertainment, or dining out. Vega will send you smart notifications when you're approaching your limits or have unusual spending patterns."
                 />
                 <FaqItem
                   itemNum="four"
-                  question="What is the maximum recording length?"
-                  answer="Conversations and comments can be any length."
+                  question="Is my financial data secure?"
+                  answer="Absolutely. Vega uses bank-level encryption and security measures to protect your data. We never store your banking credentials, and all data is encrypted both in transit and at rest."
                 />
                 <FaqItem
                   itemNum="five"
-                  question="Can I edit or delete my recordings?"
-                  answer="There will be no support for editing audio in the initial version. However, you can always delete a recording that you create."
+                  question="Can I share budgets with family members?"
+                  answer="Yes, Vega supports family budget sharing. You can invite family members to view and contribute to shared budgets, perfect for managing household expenses together."
                 />
                 <FaqItem
                   itemNum="seven"
-                  question="Does the app offer a free trial or a freemium version?"
-                  answer="Roads will always have a free version where all the core features will be available. Premium features will also be made available for a small fee."
+                  question="Does Vega offer a free version?"
+                  answer="Vega offers a free tier with core expense tracking and basic AI categorization. Premium features like advanced analytics, unlimited budget categories, and family sharing are available with our paid plans."
                 />
                 <FaqItem
                   itemNum="eight"
                   question="How can I delete my account and data?"
                   answer={
                     <span>
-                      Within the app you can find a{' '}
-                      <strong>Delete Account</strong> link under settings which
-                      will delete your account and all related data. For full
-                      instructions{' '}
-                      <Link href="/delete-account">view this page.</Link>
+                      You can delete your account anytime in the app settings
+                      under <strong>Account Management</strong>. This will
+                      permanently delete all your data from our servers.{' '}
+                      <Link href="/delete-account">
+                        View detailed instructions here.
+                      </Link>
                     </span>
                   }
                 />
@@ -236,7 +235,7 @@ export default function Home() {
 
         <div id={styles.section_wait_list}>
           <h2 className="h2-lg my-lg text-center text-primary">
-            Do More With Your Voice
+            Take Control of Your Finances
           </h2>
           <AppLinks />
         </div>

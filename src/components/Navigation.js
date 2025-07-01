@@ -6,13 +6,15 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navbar bg-primary">
-        <Link className="navbar-brand" href="/">
-          <Image 
-            src="/images/RoadsTextWhite.png"
-            alt="Roads Logo"
-            height={50}
-            width={125}
-          />
+        <Link href="/" legacyBehavior>
+          <a className="navbar-brand">
+            <Image
+              src="/images/vega-icon.png"
+              alt="Vega Logo"
+              height={90}
+              width={90}
+            />
+          </a>
         </Link>
       </nav>
     );

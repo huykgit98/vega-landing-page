@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/functions/:path*',
-        destination: `${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}/functions/v1/:path*`,
+        destination: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/:path*`,
       },
     ];
   },

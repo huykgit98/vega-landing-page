@@ -10,37 +10,50 @@ export default function ResetCallback() {
     const supabase = createClientComponentClient();
 
     async function handleReset() {
-      // 1) pull the token_hash out of the query
-      const url = new URL(window.location.href);
-      const token_hash = url.searchParams.get('token_hash');
+      try {
+        // 1) parse token_hash + email out of the URL
+        const url = new URL(window.location.href);
 
-      if (!token_hash) {
-        // missing token → deep‐link into your error handler
+        const tokenHash = url.searchParams.get('token_hash');
+        const email = url.searchParams.get('email');
+
+        if (!tokenHash || !email) {
+          console.error('ResetCallback missing token_hash or email');
+          window.location.href = 'vega://auth-error';
+          return;
+        }
+
+        // 2) exchange OTP for a session
+        const {
+          data,
+          error,
+        }: { data: { session: Session | null }; error: AuthError | null } =
+          await supabase.auth.verifyOtp({
+            type: 'recovery',
+            token: tokenHash, // must use `token`
+            email, // required by the TS signature
+          });
+
+        if (error || !data.session) {
+          console.error('verifyOtp(recovery) failed:', error);
+          window.location.href = 'vega://auth-error';
+          return;
+        }
+
+        // 3) build the fragment with access + refresh tokens
+        const { access_token, refresh_token, expires_in } = data.session;
+        const fragment = new URLSearchParams({
+          access_token,
+          refresh_token,
+          expires_in: expires_in.toString(),
+        }).toString();
+
+        // 4) deep‐link back into your Flutter app
+        window.location.href = `vega://reset-callback#${fragment}`;
+      } catch (err) {
+        console.error('Error in ResetCallback:', err);
         window.location.href = 'vega://auth-error';
-        return;
       }
-
-      // 2) exchange that OTP for a real session
-      const { data, error } = await supabase.auth.verifyOtp({
-        type: 'recovery',
-        token_hash: token_hash,
-      });
-
-      if (error || !data?.session) {
-        window.location.href = 'vega://auth-error';
-        return;
-      }
-
-      // 3) build the fragment with your tokens
-      const { access_token, refresh_token, expires_in } = data.session;
-      const fragment = new URLSearchParams({
-        access_token,
-        refresh_token,
-        expires_in: expires_in.toString(),
-      }).toString();
-
-      // 4) finally deep-link back into your Flutter app
-      window.location.href = `vega://choose-new-password#${fragment}`;
     }
 
     handleReset();

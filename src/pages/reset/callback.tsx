@@ -1,11 +1,6 @@
-// pages/reset/callback.tsx
-
-// 1. FORCE runtime rendering
-export const dynamic = 'force-dynamic';
-// 2. USE the experimental edge runtime
+// src/pages/reset/callback.tsx
+'use client';
 export const runtime = 'experimental-edge';
-
-('use client');
 
 import { useEffect, useState } from 'react';
 
@@ -13,9 +8,11 @@ export default function ResetCallback() {
   const [deepLink, setDeepLink] = useState<string | null>(null);
 
   useEffect(() => {
+    // 1) Read the fragment that your Edge Function appended
     const frag = window.location.hash.substring(1);
     if (!frag) return;
 
+    // 2) Construct the vega:// link and navigate
     const link = `vega://reset-callback#${frag}`;
     setDeepLink(link);
     window.location.href = link;
@@ -32,12 +29,15 @@ export default function ResetCallback() {
           <button
             onClick={() => (window.location.href = deepLink)}
             style={{
+              display: 'inline-block',
               padding: '12px 24px',
               background: '#ef5350',
               color: '#fff',
+              textDecoration: 'none',
               border: 'none',
-              borderRadius: 4,
+              borderRadius: '4px',
               cursor: 'pointer',
+              fontSize: '16px',
             }}
           >
             Open Vega App

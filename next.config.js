@@ -1,5 +1,5 @@
-/** next.config.js **/
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   async rewrites() {
     const fn = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/auth-confirm`;
     return [
@@ -8,3 +8,4 @@ module.exports = {
     ];
   },
 };
+module.exports = nextConfig;

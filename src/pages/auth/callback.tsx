@@ -1,6 +1,8 @@
 // pages/auth/callback.tsx
 
+// 1. FORCE runtime rendering
 export const dynamic = 'force-dynamic';
+// 2. USE the experimental edge runtime
 export const runtime = 'experimental-edge';
 
 ('use client');
@@ -13,7 +15,7 @@ export default function AuthCallback() {
   useEffect(() => {
     const supabase = createClientComponentClient();
 
-    async function handleSignUpCallback() {
+    async function run() {
       const url = new URL(window.location.href);
       const token_hash = url.searchParams.get('token_hash');
       if (!token_hash) {
@@ -44,7 +46,7 @@ export default function AuthCallback() {
       window.location.href = `vega://auth-callback#${fragment}`;
     }
 
-    handleSignUpCallback();
+    run();
   }, []);
 
   return (

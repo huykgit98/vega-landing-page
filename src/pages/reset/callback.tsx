@@ -1,24 +1,27 @@
-// Force dynamic rendering (no static export)
+// pages/reset/callback.tsx
+
+// 1) Force this page to be rendered at runtime (no static export)
+// 2) Tell Next to use the experimental edge runtime for this page
 export const dynamic = 'force-dynamic';
-// Use the experimental edge runtime
 export const runtime = 'experimental-edge';
 
 ('use client');
+
 import { useEffect, useState } from 'react';
 
 export default function ResetCallback() {
   const [deepLink, setDeepLink] = useState<string | null>(null);
 
   useEffect(() => {
-    // 1) grab the fragment your Edge Function attached
+    // Read the fragment that our Edge Function appended (access_token, refresh_token, etc)
     const frag = window.location.hash.substring(1);
     if (!frag) return;
 
-    // 2) build the vega:// link
+    // Build the vega:// link
     const link = `vega://reset-callback#${frag}`;
     setDeepLink(link);
 
-    // 3) try to redirect
+    // Try to redirect automatically
     window.location.href = link;
   }, []);
 

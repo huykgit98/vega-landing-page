@@ -1,44 +1,56 @@
 // pages/auth/callback.tsx
-'use client';
 
-import { useEffect, useState } from 'react';
+export const dynamic = 'force-dynamic';
+export const runtime = 'experimental-edge';
+
+('use client');
+
+import { useEffect } from 'react';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import type { AuthError, Session } from '@supabase/supabase-js';
 
 export default function AuthCallback() {
-  const [deepLink, setDeepLink] = useState<string | null>(null);
-
   useEffect(() => {
-    const frag = window.location.hash.substring(1);
-    if (!frag) return;
-    const link = `vega://auth-callback#${frag}`;
-    setDeepLink(link);
-    window.location.href = link;
+    const supabase = createClientComponentClient();
+
+    async function handleSignUpCallback() {
+      const url = new URL(window.location.href);
+      const token_hash = url.searchParams.get('token_hash');
+      if (!token_hash) {
+        console.error('Missing token_hash');
+        window.location.href = 'vega://auth-error';
+        return;
+      }
+
+      const {
+        data,
+        error,
+      }: { data: { session: Session | null }; error: AuthError | null } =
+        await supabase.auth.verifyOtp({ type: 'email', token_hash });
+
+      if (error || !data?.session) {
+        console.error('verifyOtp failed:', error);
+        window.location.href = 'vega://auth-error';
+        return;
+      }
+
+      const { access_token, refresh_token, expires_in } = data.session;
+      const fragment = new URLSearchParams({
+        access_token,
+        refresh_token,
+        expires_in: expires_in.toString(),
+      }).toString();
+
+      window.location.href = `vega://auth-callback#${fragment}`;
+    }
+
+    handleSignUpCallback();
   }, []);
 
   return (
     <div style={{ textAlign: 'center', padding: '4rem' }}>
       <h1>Signing you in…</h1>
-      <p>Please wait a moment—redirecting you to the Vega app.</p>
-
-      {deepLink && (
-        <>
-          <p>If nothing happened, tap below:</p>
-          <button
-            onClick={() => (window.location.href = deepLink)}
-            style={{
-              display: 'inline-block',
-              padding: '12px 24px',
-              background: '#5c6bc0',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              fontSize: '16px',
-            }}
-          >
-            Open Vega App
-          </button>
-        </>
-      )}
+      <p>Please wait a moment—redirecting.</p>
     </div>
   );
 }

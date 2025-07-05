@@ -1,25 +1,24 @@
-// pages/reset/callback.tsx
+// Force dynamic rendering (no static export)
 export const dynamic = 'force-dynamic';
-export const runtime = 'edge';
+// Use the experimental edge runtime
+export const runtime = 'experimental-edge';
 
 ('use client');
-
 import { useEffect, useState } from 'react';
 
 export default function ResetCallback() {
   const [deepLink, setDeepLink] = useState<string | null>(null);
 
   useEffect(() => {
-    // 1) The Edge Function should have redirected here with
-    //    vega://reset-callback#access_token=…&refresh_token=…&expires_in=…
+    // 1) grab the fragment your Edge Function attached
     const frag = window.location.hash.substring(1);
     if (!frag) return;
 
-    // 2) Build the mobile deep-link
+    // 2) build the vega:// link
     const link = `vega://reset-callback#${frag}`;
     setDeepLink(link);
 
-    // 3) Try to redirect immediately
+    // 3) try to redirect
     window.location.href = link;
   }, []);
 
@@ -30,17 +29,19 @@ export default function ResetCallback() {
 
       {deepLink && (
         <>
-          <p>If you don’t get prompted, tap the button below:</p>
+          <p>If nothing happened, tap the button below:</p>
           <button
             onClick={() => (window.location.href = deepLink)}
             style={{
+              display: 'inline-block',
               padding: '12px 24px',
               background: '#ef5350',
               color: '#fff',
+              textDecoration: 'none',
               border: 'none',
-              borderRadius: 4,
+              borderRadius: '4px',
               cursor: 'pointer',
-              fontSize: 16,
+              fontSize: '16px',
             }}
           >
             Open Vega App

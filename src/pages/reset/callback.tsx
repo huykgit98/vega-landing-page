@@ -3,21 +3,21 @@ import { useEffect, useState } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 export default function ResetCallback() {
-  const [deepLink, setDeepLink] = useState<string>();
+  const [link, setLink] = useState<string>();
 
   useEffect(() => {
     const supabase = createClientComponentClient();
-    const params = new URL(window.location.href).searchParams;
-    const tokenHash = params.get('token_hash');
-    const email = params.get('email');
+    const p = new URL(window.location.href).searchParams;
+    const token = p.get('token_hash');
+    const email = p.get('email');
 
-    if (!tokenHash || !email) {
+    if (!token || !email) {
       window.location.href = 'vega://auth-error';
       return;
     }
 
     supabase.auth
-      .verifyOtp({ type: 'recovery', token: tokenHash, email })
+      .verifyOtp({ type: 'recovery', token, email })
       .then(({ data, error }) => {
         if (error || !data?.session) {
           window.location.href = 'vega://auth-error';
@@ -29,9 +29,9 @@ export default function ResetCallback() {
           refresh_token,
           expires_in: expires_in.toString(),
         }).toString();
-        const link = `vega://reset-callback#${frag}`;
-        setDeepLink(link);
-        window.location.href = link;
+        const deeplink = `vega://reset-callback#${frag}`;
+        setLink(deeplink);
+        window.location.href = deeplink;
       });
   }, []);
 
@@ -39,11 +39,11 @@ export default function ResetCallback() {
     <div style={{ textAlign: 'center', padding: '4rem' }}>
       <h1>Resetting your password…</h1>
       <p>Please wait a moment—redirecting you to the Vega app.</p>
-      {deepLink && (
+      {link && (
         <>
-          <p>If nothing happened, tap the button below:</p>
+          <p>If nothing happened, tap below:</p>
           <button
-            onClick={() => (window.location.href = deepLink)}
+            onClick={() => (window.location.href = link)}
             style={{
               padding: '12px 24px',
               background: '#ef5350',

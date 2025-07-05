@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // any other config you have (images, env, i18n, etc)
-  // but no more rewrites for /auth/callback or /reset/callback
+  async rewrites() {
+    return [
+      {
+        source: '/auth/callback',
+        destination: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/auth-confirm`,
+      },
+      {
+        source: '/reset/callback',
+        destination: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/auth-confirm`,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

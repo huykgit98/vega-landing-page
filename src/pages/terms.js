@@ -13,141 +13,144 @@ const Terms = () => {
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-8">
-            <h1 className="mb-4">Terms of Service</h1>
+            <h1 className="mb-4">Terms & Conditions</h1>
             <p className="text-muted mb-4">Last updated: September 6, 2025</p>
 
             <div className="terms-content">
               <section className="mb-4">
-                <h2>1. Acceptance of Terms</h2>
+                <h2>1. Introduction</h2>
                 <p>
-                  By accessing and using Roads, you accept and agree to be bound
-                  by the terms and provision of this agreement. If you do not
-                  agree to abide by the above, please do not use this service.
+                  Welcome to Vega. These Terms and Conditions govern your use of
+                  our money tracking app ("the App"). By signing up for an
+                  account and using our services, you agree to comply with and
+                  be bound by these terms. If you do not agree with any part of
+                  these terms, please do not use the App.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>2. Description of Service</h2>
+                <h2>2. Account Registration</h2>
                 <p>
-                  Roads is an audio sharing platform that allows users to
-                  create, share, and discover audio content. The service
-                  includes features for recording, uploading, and distributing
-                  audio content to other users.
+                  <strong>2.1 Account Information:</strong> You agree to provide
+                  accurate and complete information during registration and keep
+                  your account information updated.
+                </p>
+                <p>
+                  <strong>2.2 Account Security:</strong> You are responsible for
+                  maintaining the confidentiality of your account login
+                  credentials. You are also responsible for all activities that
+                  occur under your account. Please notify us immediately if you
+                  suspect any unauthorized use of your account.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>3. User Accounts</h2>
+                <h2>3. User Responsibilities</h2>
                 <p>
-                  To access certain features of Roads, you must create an
-                  account. You are responsible for:
+                  <strong>3.1 Compliance with Laws:</strong> You agree to use
+                  the App in accordance with all applicable laws and
+                  regulations.
+                </p>
+                <p>
+                  <strong>3.2 Prohibited Activities:</strong> You agree not to
+                  engage in any of the following activities:
                 </p>
                 <ul>
                   <li>
-                    Maintaining the confidentiality of your account credentials
+                    Using the App for any illegal or unauthorized purpose.
                   </li>
-                  <li>All activities that occur under your account</li>
-                  <li>Providing accurate and complete information</li>
-                  <li>Notifying us immediately of any unauthorized use</li>
+                  <li>
+                    Misusing, hacking, or reverse engineering any part of the
+                    App.
+                  </li>
+                  <li>
+                    Uploading or transmitting any malicious code or harmful
+                    content.
+                  </li>
+                  <li>
+                    Impersonating any person or entity or misrepresenting your
+                    affiliation with any person or entity.
+                  </li>
                 </ul>
               </section>
 
               <section className="mb-4">
-                <h2>4. Content Guidelines</h2>
+                <h2>4. Intellectual Property</h2>
                 <p>
-                  When using Roads, you agree not to upload, share, or
-                  distribute content that:
+                  <strong>4.1 Ownership:</strong> The App, including its
+                  content, features, and functionality, is owned by Vega and is
+                  protected by intellectual property laws. You do not have the
+                  right to copy, distribute, or create derivative works from any
+                  part of the App without our express permission.
                 </p>
-                <ul>
-                  <li>Violates any laws or regulations</li>
-                  <li>Contains hate speech, harassment, or threats</li>
-                  <li>Infringes on intellectual property rights</li>
-                  <li>Contains malicious software or spam</li>
-                  <li>Is sexually explicit or inappropriate</li>
-                  <li>Promotes violence or illegal activities</li>
-                </ul>
-              </section>
-
-              <section className="mb-4">
-                <h2>5. Intellectual Property</h2>
                 <p>
-                  You retain ownership of the content you create and share on
-                  Roads. By using our service, you grant us a non-exclusive,
-                  worldwide license to use, display, and distribute your content
-                  solely for the purpose of operating and improving our
-                  platform.
+                  <strong>4.2 User Content:</strong> Any content you submit
+                  through the App, such as feedback or suggestions, becomes the
+                  property of Vega. We may use, modify, and distribute this
+                  content without any obligation to you.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>6. Privacy</h2>
+                <h2>5. Termination of Accounts</h2>
                 <p>
-                  Your privacy is important to us. Please review our Privacy
-                  Policy, which also governs your use of the service, to
-                  understand our practices.
+                  <strong>5.1 Termination by You:</strong> You may close your
+                  account at any time by contacting us.
+                </p>
+                <p>
+                  <strong>5.2 Termination by Us:</strong> We reserve the right
+                  to suspend or terminate your account if you violate these
+                  Terms and Conditions or engage in any activity that we deem
+                  harmful to the App or other users.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>7. Prohibited Uses</h2>
-                <p>You may not use Roads to:</p>
-                <ul>
-                  <li>Violate any applicable laws or regulations</li>
-                  <li>Transmit viruses or malicious code</li>
-                  <li>Attempt to gain unauthorized access to our systems</li>
-                  <li>Interfere with or disrupt the service</li>
-                  <li>Create multiple accounts for fraudulent purposes</li>
-                </ul>
-              </section>
-
-              <section className="mb-4">
-                <h2>8. Termination</h2>
+                <h2>6. Limitation of Liability</h2>
                 <p>
-                  We may terminate or suspend your account immediately, without
-                  prior notice or liability, for any reason whatsoever,
-                  including without limitation if you breach the Terms.
+                  <strong>6.1 No Warranty:</strong> The App is provided "as is"
+                  without any warranties, express or implied. We do not
+                  guarantee that the App will be error-free, secure, or
+                  continuously available.
+                </p>
+                <p>
+                  <strong>6.2 Limitation of Liability:</strong> To the maximum
+                  extent permitted by law, Vega shall not be liable for any
+                  damages, including but not limited to indirect, incidental, or
+                  consequential damages, arising out of or related to your use
+                  of the App.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>9. Disclaimers</h2>
+                <h2>7. Governing Law</h2>
                 <p>
-                  Roads is provided on an "as is" and "as available" basis. We
-                  make no warranties, expressed or implied, and hereby disclaim
-                  all other warranties including implied warranties of
-                  merchantability, fitness for a particular purpose, or
-                  non-infringement.
+                  These Terms and Conditions are governed by and construed in
+                  accordance with the laws of Australia. Any disputes arising
+                  from or related to these terms shall be subject to the
+                  exclusive jurisdiction of the courts of Australia. If you
+                  access the App from outside Australia, you are responsible for
+                  complying with the local laws applicable to your use of the
+                  App.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>10. Limitation of Liability</h2>
+                <h2>8. Changes to the Terms</h2>
                 <p>
-                  In no event shall 1ManStartup LLC be liable for any indirect,
-                  incidental, special, consequential, or punitive damages,
-                  including without limitation, loss of profits, data, use,
-                  goodwill, or other intangible losses.
+                  We reserve the right to modify these Terms and Conditions at
+                  any time. We will update the "Last Updated" date at the top of
+                  this document. Your continued use of the App after the changes
+                  become effective constitutes your acceptance of the new terms.
                 </p>
               </section>
 
               <section className="mb-4">
-                <h2>11. Changes to Terms</h2>
+                <h2>9. Contact Us</h2>
                 <p>
-                  We reserve the right to modify or replace these Terms at any
-                  time. If a revision is material, we will try to provide at
-                  least 30 days notice prior to any new terms taking effect.
-                </p>
-              </section>
-
-              <section className="mb-4">
-                <h2>12. Contact Information</h2>
-                <p>
-                  If you have any questions about these Terms of Service, please
-                  contact us at:
-                </p>
-                <p>
-                  Email:{' '}
-                  <a href="mailto:support@vegaapp.com">support@vegaapp.com</a>
+                  If you have any questions or concerns about these Terms and
+                  Conditions, please contact us at{' '}
+                  <a href="mailto:support@vegaapp.com">support@vegaapp.com</a>.
                 </p>
               </section>
             </div>

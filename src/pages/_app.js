@@ -29,6 +29,10 @@ export default function App({ Component, pageProps, router }) {
     '/blogs/the-evolution-of-audio-from-radio-to-roads',
   ];
   const shouldUseLayout = !pagesWithoutLayout.includes(router.pathname);
+  
+  // Debug logging
+  console.log('Current pathname:', router.pathname);
+  console.log('Should use layout:', shouldUseLayout);
 
   return (
     <>

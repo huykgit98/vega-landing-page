@@ -1,7 +1,6 @@
 import React from 'react';
 import DynamicMeta from '../components/DynamicMeta';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const Terms = () => {
   return (
@@ -14,9 +13,9 @@ const Terms = () => {
       />
 
       {/* Header Section */}
-      <div 
-        className="py-5" 
-        style={{ 
+      <div
+        className="py-5"
+        style={{
           background: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
           color: '#333',
           backgroundImage: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
@@ -268,7 +267,6 @@ const Terms = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

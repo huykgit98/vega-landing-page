@@ -5,7 +5,13 @@ import Image from 'next/image';
 class Navigation extends Component {
   render() {
     return (
-      <nav className="navbar bg-primary">
+      <nav 
+        className="navbar" 
+        style={{
+          background: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
+          backgroundImage: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
+        }}
+      >
         <Link href="/" legacyBehavior>
           <a className="navbar-brand">
             <Image

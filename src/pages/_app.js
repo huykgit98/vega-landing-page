@@ -3,31 +3,44 @@ import '@/styles/globals.scss';
 import '@/styles/blogs.scss';
 import { Montserrat } from 'next/font/google';
 import { useEffect } from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
 import ReactGA from 'react-ga4';
 import DynamicMeta from '@/components/DynamicMeta';
 import useDropShadow from '@/hooks/useDropShadow';
 import Layout from '@/components/Layout';
 
-
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router }) {
   useDropShadow();
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle.min.js');
 
     // Initialize Google Analyitics.
-    ReactGA.initialize(`${process.env.NEXT_PUBLIC_GTAG_ID}`)
+    ReactGA.initialize(`${process.env.NEXT_PUBLIC_GTAG_ID}`);
   }, []);
+
+  // Pages that shouldn't use the global Layout (home page has its own navigation via Hero component)
+  const pagesWithoutLayout = [
+    '/',
+    '/privacy',
+    '/terms',
+    '/blogs/how-to-start-a-private-micro-podcast',
+    '/blogs/the-evolution-of-audio-from-radio-to-roads',
+  ];
+  const shouldUseLayout = !pagesWithoutLayout.includes(router.pathname);
 
   return (
     <>
       <DynamicMeta />
       <main className={montserrat.className}>
-        <Layout>
+        {shouldUseLayout ? (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        ) : (
           <Component {...pageProps} />
-        </Layout>
+        )}
       </main>
     </>
   );

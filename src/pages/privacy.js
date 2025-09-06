@@ -1,10 +1,12 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import DynamicMeta from '../components/DynamicMeta';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const Privacy = () => {
   return (
-    <Layout>
+    <>
+      <Navigation />
       <DynamicMeta
         title="Privacy Policy - Vega"
         description="Learn about how Vega protects your privacy and handles your personal information."
@@ -12,7 +14,12 @@ const Privacy = () => {
       />
 
       {/* Header Section */}
-      <div className="bg-primary text-white py-5">
+      <div
+        className="text-dark py-5"
+        style={{
+          background: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
+        }}
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
@@ -21,9 +28,7 @@ const Privacy = () => {
                 Learn how Vega protects your privacy and handles your personal
                 information
               </p>
-              <p className="text-white-50 mt-2">
-                Last updated: September 6, 2025
-              </p>
+              <p className="text-muted mt-2">Last updated: September 6, 2025</p>
             </div>
           </div>
         </div>
@@ -278,7 +283,8 @@ const Privacy = () => {
           </div>
         </div>
       </div>
-    </Layout>
+      <Footer />
+    </>
   );
 };
 

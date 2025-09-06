@@ -1,10 +1,12 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import DynamicMeta from '../components/DynamicMeta';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const Terms = () => {
   return (
-    <Layout>
+    <>
+      <Navigation />
       <DynamicMeta
         title="Terms & Conditions - Vega"
         description="Read the Terms & Conditions for using the Vega money tracking app."
@@ -12,7 +14,12 @@ const Terms = () => {
       />
 
       {/* Header Section */}
-      <div className="bg-primary text-white py-5">
+      <div
+        className="text-dark py-5"
+        style={{
+          background: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
+        }}
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
@@ -20,9 +27,7 @@ const Terms = () => {
               <p className="lead mb-0">
                 Terms and conditions for using the Vega money tracking app
               </p>
-              <p className="text-white-50 mt-2">
-                Last updated: September 6, 2025
-              </p>
+              <p className="text-muted mt-2">Last updated: September 6, 2025</p>
             </div>
           </div>
         </div>
@@ -194,7 +199,9 @@ const Terms = () => {
               </section>
 
               <section className="mb-5" id="termination">
-                <h2 className="border-bottom pb-2 mb-4">5. Termination of Accounts</h2>
+                <h2 className="border-bottom pb-2 mb-4">
+                  5. Termination of Accounts
+                </h2>
                 <p>
                   <strong>5.1 Termination by You:</strong> You may close your
                   account at any time by contacting us.
@@ -259,7 +266,8 @@ const Terms = () => {
           </div>
         </div>
       </div>
-    </Layout>
+      <Footer />
+    </>
   );
 };
 

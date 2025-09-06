@@ -10,21 +10,104 @@ const Privacy = () => {
         description="Learn about how Vega protects your privacy and handles your personal information."
         url="/privacy"
       />
+
+      {/* Header Section */}
+      <div className="bg-primary text-white py-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <h1 className="display-4 mb-3">Privacy Policy</h1>
+              <p className="lead mb-0">
+                Learn how Vega protects your privacy and handles your personal
+                information
+              </p>
+              <p className="text-white-50 mt-2">
+                Last updated: September 6, 2025
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-8">
-            <h1 className="mb-4">Privacy Policy</h1>
-            <p className="text-muted mb-4">Last updated: September 6, 2025</p>
+            {/* Table of Contents */}
+            <div className="card mb-5">
+              <div className="card-body">
+                <h5 className="card-title">Quick Navigation</h5>
+                <div className="row">
+                  <div className="col-md-6">
+                    <ul className="list-unstyled mb-0">
+                      <li>
+                        <a
+                          href="#information-collect"
+                          className="text-decoration-none"
+                        >
+                          Information We Collect
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#how-we-use" className="text-decoration-none">
+                          How We Use Your Information
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#data-sharing"
+                          className="text-decoration-none"
+                        >
+                          Data Sharing and Disclosure
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#your-rights" className="text-decoration-none">
+                          Your Data Rights
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-6">
+                    <ul className="list-unstyled mb-0">
+                      <li>
+                        <a
+                          href="#data-security"
+                          className="text-decoration-none"
+                        >
+                          Data Security Disclaimer
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#policy-changes"
+                          className="text-decoration-none"
+                        >
+                          Changes to Privacy Policy
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#contact" className="text-decoration-none">
+                          Contact Us
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="privacy-content">
-              <p className="mb-4">
-                At Vega, your privacy is our priority. This Privacy Policy
-                outlines how we collect, use, and safeguard your personal
-                information when you use our money tracking app.
-              </p>
+              <div className="alert alert-info" role="alert">
+                <strong>At Vega, your privacy is our priority.</strong> This
+                Privacy Policy outlines how we collect, use, and safeguard your
+                personal information when you use our money tracking app.
+              </div>
 
-              <section className="mb-4">
-                <h2>Information We Collect</h2>
+              <section className="mb-5" id="information-collect">
+                <h2 className="border-bottom pb-2 mb-4">
+                  Information We Collect
+                </h2>
                 <p>We collect the following types of information:</p>
 
                 <h3>1. Personal Information</h3>
@@ -76,8 +159,10 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="mb-4">
-                <h2>How We Use Your Information</h2>
+              <section className="mb-5" id="how-we-use">
+                <h2 className="border-bottom pb-2 mb-4">
+                  How We Use Your Information
+                </h2>
                 <p>
                   We use the collected information for the following purposes:
                 </p>
@@ -107,8 +192,10 @@ const Privacy = () => {
                 </ol>
               </section>
 
-              <section className="mb-4">
-                <h2>Data Sharing and Disclosure</h2>
+              <section className="mb-5" id="data-sharing">
+                <h2 className="border-bottom pb-2 mb-4">
+                  Data Sharing and Disclosure
+                </h2>
                 <p>
                   We do not share your personal information with third parties
                   except in the following cases:
@@ -130,8 +217,8 @@ const Privacy = () => {
                 </ol>
               </section>
 
-              <section className="mb-4">
-                <h2>Your Data Rights</h2>
+              <section className="mb-5" id="your-rights">
+                <h2 className="border-bottom pb-2 mb-4">Your Data Rights</h2>
                 <p>You have the following rights regarding your data:</p>
                 <ol>
                   <li>
@@ -149,8 +236,10 @@ const Privacy = () => {
                 </ol>
               </section>
 
-              <section className="mb-4">
-                <h2>Data Security Disclaimer</h2>
+              <section className="mb-5" id="data-security">
+                <h2 className="border-bottom pb-2 mb-4">
+                  Data Security Disclaimer
+                </h2>
                 <p>
                   We take reasonable measures to secure your personal
                   information and protect it from unauthorized access, use, or
@@ -164,8 +253,10 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="mb-4">
-                <h2>Changes to the Privacy Policy</h2>
+              <section className="mb-5" id="policy-changes">
+                <h2 className="border-bottom pb-2 mb-4">
+                  Changes to the Privacy Policy
+                </h2>
                 <p>
                   We reserve the right to modify this Privacy Policy at any
                   time. We will update the "Last Updated" date at the top of
@@ -175,8 +266,8 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="mb-4">
-                <h2>Contact Us</h2>
+              <section className="mb-5" id="contact">
+                <h2 className="border-bottom pb-2 mb-4">Contact Us</h2>
                 <p>
                   If you have any questions or concerns about this Privacy
                   Policy, please contact us at{' '}

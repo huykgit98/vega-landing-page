@@ -6,19 +6,115 @@ const Terms = () => {
   return (
     <Layout>
       <DynamicMeta
-        title="Terms of Service - Roads"
-        description="Read the Terms of Service for using the Roads audio sharing platform."
+        title="Terms & Conditions - Vega"
+        description="Read the Terms & Conditions for using the Vega money tracking app."
         url="/terms"
       />
+
+      {/* Header Section */}
+      <div className="bg-primary text-white py-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <h1 className="display-4 mb-3">Terms & Conditions</h1>
+              <p className="lead mb-0">
+                Terms and conditions for using the Vega money tracking app
+              </p>
+              <p className="text-white-50 mt-2">
+                Last updated: September 6, 2025
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-8">
-            <h1 className="mb-4">Terms & Conditions</h1>
-            <p className="text-muted mb-4">Last updated: September 6, 2025</p>
+            {/* Table of Contents */}
+            <div className="card mb-5">
+              <div className="card-body">
+                <h5 className="card-title">Quick Navigation</h5>
+                <div className="row">
+                  <div className="col-md-6">
+                    <ul className="list-unstyled mb-0">
+                      <li>
+                        <a
+                          href="#introduction"
+                          className="text-decoration-none"
+                        >
+                          Introduction
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#account-registration"
+                          className="text-decoration-none"
+                        >
+                          Account Registration
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#user-responsibilities"
+                          className="text-decoration-none"
+                        >
+                          User Responsibilities
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#intellectual-property"
+                          className="text-decoration-none"
+                        >
+                          Intellectual Property
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#termination" className="text-decoration-none">
+                          Termination of Accounts
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-6">
+                    <ul className="list-unstyled mb-0">
+                      <li>
+                        <a href="#liability" className="text-decoration-none">
+                          Limitation of Liability
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#governing-law"
+                          className="text-decoration-none"
+                        >
+                          Governing Law
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#terms-changes"
+                          className="text-decoration-none"
+                        >
+                          Changes to Terms
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#contact" className="text-decoration-none">
+                          Contact Us
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="terms-content">
-              <section className="mb-4">
-                <h2>1. Introduction</h2>
+              <section className="mb-5" id="introduction">
+                <h2 className="border-bottom pb-2 mb-4">1. Introduction</h2>
                 <p>
                   Welcome to Vega. These Terms and Conditions govern your use of
                   our money tracking app ("the App"). By signing up for an
@@ -28,8 +124,10 @@ const Terms = () => {
                 </p>
               </section>
 
-              <section className="mb-4">
-                <h2>2. Account Registration</h2>
+              <section className="mb-5" id="account-registration">
+                <h2 className="border-bottom pb-2 mb-4">
+                  2. Account Registration
+                </h2>
                 <p>
                   <strong>2.1 Account Information:</strong> You agree to provide
                   accurate and complete information during registration and keep
@@ -44,8 +142,10 @@ const Terms = () => {
                 </p>
               </section>
 
-              <section className="mb-4">
-                <h2>3. User Responsibilities</h2>
+              <section className="mb-5" id="user-responsibilities">
+                <h2 className="border-bottom pb-2 mb-4">
+                  3. User Responsibilities
+                </h2>
                 <p>
                   <strong>3.1 Compliance with Laws:</strong> You agree to use
                   the App in accordance with all applicable laws and
@@ -74,8 +174,10 @@ const Terms = () => {
                 </ul>
               </section>
 
-              <section className="mb-4">
-                <h2>4. Intellectual Property</h2>
+              <section className="mb-5" id="intellectual-property">
+                <h2 className="border-bottom pb-2 mb-4">
+                  4. Intellectual Property
+                </h2>
                 <p>
                   <strong>4.1 Ownership:</strong> The App, including its
                   content, features, and functionality, is owned by Vega and is
@@ -91,8 +193,8 @@ const Terms = () => {
                 </p>
               </section>
 
-              <section className="mb-4">
-                <h2>5. Termination of Accounts</h2>
+              <section className="mb-5" id="termination">
+                <h2 className="border-bottom pb-2 mb-4">5. Termination of Accounts</h2>
                 <p>
                   <strong>5.1 Termination by You:</strong> You may close your
                   account at any time by contacting us.

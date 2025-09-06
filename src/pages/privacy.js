@@ -14,7 +14,14 @@ const Privacy = () => {
       />
 
       {/* Header Section */}
-      <div className="bg-graident py-5" style={{ color: '#333' }}>
+      <div 
+        className="py-5" 
+        style={{ 
+          background: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
+          color: '#333',
+          backgroundImage: 'linear-gradient(135deg, #fde6e3 0%, #ebeafc 100%)',
+        }}
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">

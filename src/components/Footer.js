@@ -14,19 +14,11 @@ class Footer extends Component {
     return (
       <div id="section_footer">
         <div className="text-center py-4">
-          <Link
-            href="https://1manstartup.com/privacy-policy"
-            target="_blank"
-            className="btn btn-link"
-          >
+          <Link href="/privacy" className="btn btn-link">
             Privacy
           </Link>
           <span>|</span>
-          <Link
-            href="https://1manstartup.com/terms-and-conditions"
-            target="_blank"
-            className="btn btn-link"
-          >
+          <Link href="/terms" className="btn btn-link">
             Terms
           </Link>
           <span>|</span>
